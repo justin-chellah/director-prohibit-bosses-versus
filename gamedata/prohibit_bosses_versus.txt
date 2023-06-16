@@ -1,0 +1,63 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"CDirector"
+			{
+				"windows"
+				{
+					"signature" "TheDirector"
+					"read" "12"
+				}
+
+				"linux"
+				{
+					"signature" "TheDirector"
+				}
+
+				"read" "0"
+			}
+		}
+
+		"Signatures"
+		{
+			"CDirector::UpdateTankSpawns"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x28\x53\x8B\xD9\xF3\x0F\x10\x83\x70\x02\x00\x00"
+				// 55 8B EC 83 EC 28 53 8B D9 F3 0F 10 83 70 02 00 00
+
+				"linux"		"@_ZN9CDirector16UpdateTankSpawnsEv"
+			}
+
+			"CDirector::AreBossesProhibited"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\x56\x8B\xF1\x8B\x8E\x48\x06\x00\x00\x8D\x45\xFF\x50\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\x8A\x45\xFF\x5E\x8B\xE5\x5D\xC3\x8B\x8E\x44\x06\x00\x00"
+				// 55 8B EC 51 56 8B F1 8B 8E 48 06 00 00 8D 45 FF 50 E8 ? ? ? ? 84 C0 74 ? 8A 45 FF 5E 8B E5 5D C3 8B 8E 44 06 00 00 
+
+				"linux"		"@_ZNK9CDirector19AreBossesProhibitedEv"
+			}
+
+			"CDirectorVersusMode::AreBossesProhibited"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\x8B\x45\x08\xC6\x00\x00"
+				// 55 8B EC E8 ? ? ? ? 84 C0 74 ? 8B 45 08 C6 00 00
+
+				"linux"		"@_ZNK19CDirectorVersusMode19AreBossesProhibitedEPb"
+			}
+
+			"TheDirector"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x1C\x56\x57\x8B\xF9\x8B\x0D"
+				// 55 8B EC 83 EC 1C 56 57 8B F9 8B 0D
+
+				"linux"		"@TheDirector"
+			}
+		}
+	}
+}
